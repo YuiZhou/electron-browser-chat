@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/electron index.js",
-    "win32": "node node_modules/electron-packager/cli.js . wechat --platform=win32 --out=out"
+    "win32": "node node_modules/electron-packager/cli.js . wechat --platform=win32 --icon=wx.ico --out=out"
   },
   "author": "",
   "license": "MIT",
