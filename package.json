@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/electron index.js"
+    "start": "./node_modules/.bin/electron index.js",
+    "win32": "node node_modules/electron-packager/cli.js . wechat --platform=win32 --out=out"
   },
   "author": "",
   "license": "MIT",

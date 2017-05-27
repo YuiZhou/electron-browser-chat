@@ -26,7 +26,7 @@ function createWindow() {
     slashes: true
   }))
 
-  tray = new Tray('./wx.png');
+  tray = new Tray(path.join(__dirname, 'wx.png'));
   tray.setToolTip('WeChat App');
   tray.setContextMenu(Menu.buildFromTemplate([
     {
