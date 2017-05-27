@@ -7,14 +7,14 @@ const url = require('url')
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow, tray
-
+let iconSrc = path.join(__dirname, 'wx.png');
 function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 1000,
     height: 800,
     resizable: false,
-    icon: './wx.png'
+    icon: iconSrc
   })
 
   mainWindow.setMenu(null);
@@ -26,7 +26,7 @@ function createWindow() {
     slashes: true
   }))
 
-  tray = new Tray(path.join(__dirname, 'wx.png'));
+  tray = new Tray(iconSrc);
   tray.setToolTip('WeChat App');
   tray.setContextMenu(Menu.buildFromTemplate([
     {
